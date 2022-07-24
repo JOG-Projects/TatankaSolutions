@@ -47,7 +47,7 @@ namespace ConvertText
             networkInterceptor.AddAuthenticationHandler(handler);
             networkInterceptor.StartMonitoring();
 
-            driver.Navigate().GoToUrl("https://www.google.com/imgres?imgurl=https%3A%2F%2Famplino.org%2Fwp-content%2Fuploads%2F2018%2F12%2Fimagem-com-frases-bonitas.jpg&imgrefurl=https%3A%2F%2Famplino.org%2F40-imagens-com-frases-bonitas-e-legais-para-se-inspirar-e-refletir%2F&tbnid=LgFYiK1OO-LhJM&vet=12ahUKEwjGopWQ1pD5AhUaL7kGHbpBCLcQMygNegUIARD5AQ..i&docid=rfJubeeGzDjpIM&w=500&h=594&q=imagem%20bonita&ved=2ahUKEwjGopWQ1pD5AhUaL7kGHbpBCLcQMygNegUIARD5AQ");
+            driver.Navigate().GoToUrl("https://www.google.com.br/");
         }
 
         private void SaveProxies()
