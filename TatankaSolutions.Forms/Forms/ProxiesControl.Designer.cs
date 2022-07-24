@@ -153,7 +153,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Lb_Proxies);
             this.Name = "ProxiesControl";
-            this.Size = new System.Drawing.Size(1234, 799);
+            this.Size = new System.Drawing.Size(1234, 790);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

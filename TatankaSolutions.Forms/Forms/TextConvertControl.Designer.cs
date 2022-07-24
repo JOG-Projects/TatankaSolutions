@@ -36,7 +36,7 @@
             // 
             // Btn_Lado
             // 
-            this.Btn_Lado.Location = new System.Drawing.Point(591, 139);
+            this.Btn_Lado.Location = new System.Drawing.Point(581, 135);
             this.Btn_Lado.Name = "Btn_Lado";
             this.Btn_Lado.Size = new System.Drawing.Size(94, 29);
             this.Btn_Lado.TabIndex = 2;
@@ -46,7 +46,7 @@
             // 
             // Btn_Baixo
             // 
-            this.Btn_Baixo.Location = new System.Drawing.Point(591, 55);
+            this.Btn_Baixo.Location = new System.Drawing.Point(581, 51);
             this.Btn_Baixo.Name = "Btn_Baixo";
             this.Btn_Baixo.Size = new System.Drawing.Size(94, 29);
             this.Btn_Baixo.TabIndex = 1;
@@ -56,9 +56,10 @@
             // 
             // Tb_Saida
             // 
-            this.Tb_Saida.Location = new System.Drawing.Point(717, 40);
+            this.Tb_Saida.Location = new System.Drawing.Point(702, 40);
             this.Tb_Saida.Multiline = true;
             this.Tb_Saida.Name = "Tb_Saida";
+            this.Tb_Saida.ReadOnly = true;
             this.Tb_Saida.Size = new System.Drawing.Size(604, 713);
             this.Tb_Saida.TabIndex = 3;
             // 
@@ -79,7 +80,7 @@
             this.Controls.Add(this.Tb_Saida);
             this.Controls.Add(this.Tb_Entrada);
             this.Name = "TextConvertControl";
-            this.Size = new System.Drawing.Size(1394, 817);
+            this.Size = new System.Drawing.Size(1365, 802);
             this.ResumeLayout(false);
             this.PerformLayout();
 
