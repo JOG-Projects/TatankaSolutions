@@ -1,6 +1,6 @@
 ﻿namespace ConvertText
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -85,7 +85,6 @@
             this.Btn_Lado.TabIndex = 8;
             this.Btn_Lado.Text = "Lado";
             this.Btn_Lado.UseVisualStyleBackColor = true;
-            this.Btn_Lado.Click += new System.EventHandler(this.Btn_Lado_Click);
             // 
             // Btn_Baixo
             // 
@@ -96,7 +95,6 @@
             this.Btn_Baixo.TabIndex = 7;
             this.Btn_Baixo.Text = "Baixo";
             this.Btn_Baixo.UseVisualStyleBackColor = true;
-            this.Btn_Baixo.Click += new System.EventHandler(this.Btn_Baixo_Click);
             // 
             // Tb_Saida
             // 
@@ -162,7 +160,6 @@
             this.btn_run.Size = new System.Drawing.Size(362, 151);
             this.btn_run.TabIndex = 8;
             this.btn_run.UseVisualStyleBackColor = false;
-            this.btn_run.Click += new System.EventHandler(this.btn_run_Click);
             // 
             // password
             // 
@@ -190,7 +187,6 @@
             this.btn_doProxy.Size = new System.Drawing.Size(86, 81);
             this.btn_doProxy.TabIndex = 2;
             this.btn_doProxy.UseVisualStyleBackColor = false;
-            this.btn_doProxy.Click += new System.EventHandler(this.btn_doProxy_Click);
             // 
             // label2
             // 
@@ -225,7 +221,6 @@
             this.lb_proxies.Name = "lb_proxies";
             this.lb_proxies.Size = new System.Drawing.Size(457, 529);
             this.lb_proxies.TabIndex = 4;
-            this.lb_proxies.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lb_proxies_KeyDown);
             // 
             // Form1
             // 
