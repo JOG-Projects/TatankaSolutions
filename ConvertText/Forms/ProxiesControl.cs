@@ -53,13 +53,66 @@ namespace ConvertText.Forms
             lb_proxies.Items.AddRange(Proxies.ToArray());
         }
 
+        private void LimparCampos()
+        {
+            ip.Clear();
+            user.Clear();
+            password.Clear();
+        }
+
+        private void Btn_Baixo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var entrada = Tb_Entrada.Text;
+
+                var linhas = entrada.Split("\n");
+
+                var final = linhas.Select(l => l.Split(" "));
+
+                Tb_Saida.Text = string.Join(Environment.NewLine, final.SelectMany(x => x));
+            }
+            catch { }
+        }
         private void SaveProxies()
         {
             File.WriteAllText("proxies.json", JsonConvert.SerializeObject(Proxies));
             LoadProxies();
         }
 
-        private void Btn_run_Click(object sender, EventArgs e)
+        private void Btn_Lado_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var entrada = Tb_Entrada.Text;
+
+                var palavras = new Queue<string>(entrada.Split("\n"));
+
+                var sb = new StringBuilder();
+                while (palavras.Any())
+                {
+                    var linha = $"{palavras.Dequeue().Trim()} {palavras.Dequeue().Trim()}";
+                    sb.AppendLine(linha);
+                }
+
+                Tb_Saida.Text = sb.ToString();
+            }
+            catch { }
+        }
+
+        private void btn_doProxy_Click(object sender, EventArgs e)
+        {
+            if (ip.Text is "" || user.Text is "" || password.Text is "")
+            {
+                return;
+            }
+
+            Proxies.Add(new ProxySetting(ip.Text, user.Text, password.Text));
+            SaveProxies();
+            LimparCampos();
+        }
+
+        private void btn_run_Click(object sender, EventArgs e)
         {
             foreach (var proxy in Proxies)
             {

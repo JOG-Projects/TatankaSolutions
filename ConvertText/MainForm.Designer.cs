@@ -158,7 +158,7 @@
             this.btn_run.Location = new System.Drawing.Point(50, 132);
             this.btn_run.Name = "btn_run";
             this.btn_run.Size = new System.Drawing.Size(362, 151);
-            this.btn_run.TabIndex = 8;
+            this.btn_run.TabIndex = 4;
             this.btn_run.UseVisualStyleBackColor = false;
             // 
             // password
@@ -166,7 +166,7 @@
             this.password.Location = new System.Drawing.Point(90, 103);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(218, 23);
-            this.password.TabIndex = 1;
+            this.password.TabIndex = 2;
             // 
             // label3
             // 
@@ -185,7 +185,7 @@
             this.btn_doProxy.Location = new System.Drawing.Point(325, 45);
             this.btn_doProxy.Name = "btn_doProxy";
             this.btn_doProxy.Size = new System.Drawing.Size(86, 81);
-            this.btn_doProxy.TabIndex = 2;
+            this.btn_doProxy.TabIndex = 3;
             this.btn_doProxy.UseVisualStyleBackColor = false;
             // 
             // label2
@@ -202,7 +202,7 @@
             this.user.Location = new System.Drawing.Point(90, 74);
             this.user.Name = "user";
             this.user.Size = new System.Drawing.Size(218, 23);
-            this.user.TabIndex = 3;
+            this.user.TabIndex = 1;
             // 
             // label1
             // 
