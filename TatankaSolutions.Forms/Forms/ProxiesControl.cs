@@ -5,6 +5,8 @@ using Keys = System.Windows.Forms.Keys;
 
 namespace ConvertText.Forms
 {
+    internal record ProxySetting(string IP, string User, string Password);
+
     internal partial class ProxiesControl : UserControl
     {
         public ProxiesControl()
@@ -16,6 +18,7 @@ namespace ConvertText.Forms
                 SaveProxies();
             }
             Proxies = JsonConvert.DeserializeObject<List<ProxySetting>>(File.ReadAllText("proxies.json"))!;
+
             LoadProxies();
         }
 
@@ -49,70 +52,36 @@ namespace ConvertText.Forms
 
         private void LoadProxies()
         {
-            lb_proxies.Items.Clear();
-            lb_proxies.Items.AddRange(Proxies.ToArray());
+            Lb_Proxies.Items.Clear();
+            Lb_Proxies.Items.AddRange(Proxies.ToArray());
         }
 
         private void LimparCampos()
         {
-            ip.Clear();
-            user.Clear();
-            password.Clear();
+            Tb_Ip.Clear();
+            Tb_User.Clear();
+            Tb_Password.Clear();
         }
 
-        private void Btn_Baixo_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                var entrada = Tb_Entrada.Text;
-
-                var linhas = entrada.Split("\n");
-
-                var final = linhas.Select(l => l.Split(" "));
-
-                Tb_Saida.Text = string.Join(Environment.NewLine, final.SelectMany(x => x));
-            }
-            catch { }
-        }
         private void SaveProxies()
         {
             File.WriteAllText("proxies.json", JsonConvert.SerializeObject(Proxies));
             LoadProxies();
         }
 
-        private void Btn_Lado_Click(object sender, EventArgs e)
+        private void Btn_doProxy_Click(object sender, EventArgs e)
         {
-            try
-            {
-                var entrada = Tb_Entrada.Text;
-
-                var palavras = new Queue<string>(entrada.Split("\n"));
-
-                var sb = new StringBuilder();
-                while (palavras.Any())
-                {
-                    var linha = $"{palavras.Dequeue().Trim()} {palavras.Dequeue().Trim()}";
-                    sb.AppendLine(linha);
-                }
-
-                Tb_Saida.Text = sb.ToString();
-            }
-            catch { }
-        }
-
-        private void btn_doProxy_Click(object sender, EventArgs e)
-        {
-            if (ip.Text is "" || user.Text is "" || password.Text is "")
+            if (Tb_Ip.Text is "" || Tb_User.Text is "" || Tb_Password.Text is "")
             {
                 return;
             }
 
-            Proxies.Add(new ProxySetting(ip.Text, user.Text, password.Text));
+            Proxies.Add(new ProxySetting(Tb_Ip.Text, Tb_User.Text, Tb_Password.Text));
             SaveProxies();
             LimparCampos();
         }
 
-        private void btn_run_Click(object sender, EventArgs e)
+        private void Btn_run_Click(object sender, EventArgs e)
         {
             foreach (var proxy in Proxies)
             {
@@ -122,19 +91,12 @@ namespace ConvertText.Forms
 
         private void Lb_proxies_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode is Keys.Delete && lb_proxies.SelectedItem is not null)
+            if (e.KeyCode is Keys.Delete && Lb_Proxies.SelectedItem is not null)
             {
-                var removed = (ProxySetting)lb_proxies.SelectedItem;
+                var removed = (ProxySetting)Lb_Proxies.SelectedItem;
                 Proxies.Remove(removed);
                 SaveProxies();
             }
-        }
-
-        private void Btn_doProxy_Click(object sender, EventArgs e)
-        {
-            var proxy = new ProxySetting(ip.Text, user.Text, password.Text);
-            Proxies.Add(proxy);
-            SaveProxies();
         }
     }
 }

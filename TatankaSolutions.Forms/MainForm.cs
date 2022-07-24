@@ -1,3 +1,5 @@
+using ConvertText.Forms;
+
 namespace ConvertText
 {
     internal partial class MainForm : Form
@@ -5,6 +7,9 @@ namespace ConvertText
         public MainForm()
         {
             InitializeComponent();
+
+            tabPage1.Controls.Add(new TextConvertControl());
+            tabPage2.Controls.Add(new ProxiesControl());
         }
     }
 }
