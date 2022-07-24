@@ -62,6 +62,13 @@ namespace ConvertText
             lb_proxies.Items.AddRange(Proxies.ToArray());
         }
 
+        private void LimparCampos()
+        {
+            ip.Clear();
+            user.Clear();
+            password.Clear();
+        }
+
         private void Btn_Baixo_Click(object sender, EventArgs e)
         {
             try
@@ -99,9 +106,14 @@ namespace ConvertText
 
         private void btn_doProxy_Click(object sender, EventArgs e)
         {
-            var proxy = new ProxySetting(ip.Text, user.Text, password.Text);
-            Proxies.Add(proxy);
+            if (ip.Text is "" || user.Text is "" || password.Text is "")
+            {
+                return;
+            }
+
+            Proxies.Add(new ProxySetting(ip.Text, user.Text, password.Text));
             SaveProxies();
+            LimparCampos();
         }
 
         private void btn_run_Click(object sender, EventArgs e)
