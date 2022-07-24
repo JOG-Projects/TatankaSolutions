@@ -1,4 +1,4 @@
-﻿namespace ConvertText.Forms
+﻿namespace TatankaSolutions.Forms
 {
     partial class TextConvertControl
     {

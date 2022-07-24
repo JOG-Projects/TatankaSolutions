@@ -1,4 +1,4 @@
-﻿namespace ConvertText
+﻿namespace TatankaSolutions
 {
     partial class MainForm
     {
@@ -75,7 +75,7 @@
             this.ClientSize = new System.Drawing.Size(1341, 792);
             this.Controls.Add(this.TabPanel);
             this.Name = "MainForm";
-            this.Text = "Conversor";
+            this.Text = "Tatanka Solutions";
             this.TabPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

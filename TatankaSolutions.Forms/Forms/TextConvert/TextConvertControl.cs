@@ -1,14 +1,15 @@
 ﻿using System.Data;
 using System.Text;
 
-namespace ConvertText.Forms
+namespace TatankaSolutions.Forms
 {
-    public partial class TextConvertControl : UserControl
+    internal partial class TextConvertControl : UserControl
     {
         public TextConvertControl()
         {
             InitializeComponent();
         }
+
         private void Btn_Baixo_Click(object sender, EventArgs e)
         {
             try

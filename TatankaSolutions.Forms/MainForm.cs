@@ -1,6 +1,6 @@
-using ConvertText.Forms;
+using TatankaSolutions.Forms;
 
-namespace ConvertText
+namespace TatankaSolutions
 {
     internal partial class MainForm : Form
     {

@@ -1,4 +1,4 @@
-namespace ConvertText
+namespace TatankaSolutions
 {
     internal static class Program
     {

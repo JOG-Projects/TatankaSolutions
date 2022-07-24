@@ -63,9 +63,9 @@ namespace TatankaSolutions.Forms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _7630ad49bdc79b8482c8627c663a1373 {
+        internal static System.Drawing.Bitmap add {
             get {
-                object obj = ResourceManager.GetObject("7630ad49bdc79b8482c8627c663a1373", resourceCulture);
+                object obj = ResourceManager.GetObject("add", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,19 @@ namespace TatankaSolutions.Forms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap play_icon_134504 {
+        internal static System.Drawing.Bitmap globe {
             get {
-                object obj = ResourceManager.GetObject("play_icon_134504", resourceCulture);
+                object obj = ResourceManager.GetObject("globe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap play {
+            get {
+                object obj = ResourceManager.GetObject("play", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
